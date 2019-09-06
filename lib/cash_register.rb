@@ -24,7 +24,7 @@ class CashRegister
         @cart << item  
         @place += 1
         count -= 1 
-        @last => {@place => {price => item}}
+        @last = {@place => {price => item}}
       end 
   end
   
