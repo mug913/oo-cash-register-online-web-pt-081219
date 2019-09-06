@@ -43,7 +43,7 @@ class CashRegister
   end
       
   def void_last_transaction 
-    @total -= @last[@place[item]]
+    @total -= @last[@place]
     @place -= 1
   end
    
