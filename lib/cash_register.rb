@@ -7,7 +7,7 @@ class CashRegister
   
   def initialize(emp_discount=0)
     @cart = []
-    @last = Hash.new
+    #@last = Hash.new
     @place = 0
     @total = 0
     @emp_discount = emp_discount
@@ -19,12 +19,13 @@ class CashRegister
   
   def add_item(item, price, quantity=1) 
     @total += (price * quantity) 
+    @last = (price * quantity)
     count = quantity 
       while count > 0 
         @cart << item  
-        @place += 1
+    #    @place += 1
         count -= 1 
-        @last = {@place => price}
+    #    @last = {@place => price}
       end 
   end
   
@@ -43,10 +44,10 @@ class CashRegister
   end
       
   def void_last_transaction 
-    binding.pry
-    @total -= @last[@place]
-    @cart.pop
-    @place -= 1
+    #binding.pry
+    @total -= @last
+    #@cart.pop
+  #  @place -= 1
     binding.pry
   end
    
