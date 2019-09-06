@@ -2,12 +2,14 @@ require 'pry'
 
 class CashRegister 
   
-  attr_accessor :emp_discount, :total
-  @@cart = []
+  attr_accessor :emp_discount, :total, :cart
+
   
   def initialize(emp_discount=0)
+    @cart = []
     @total = 0
     @emp_discount = emp_discount
+    @cart << self  
   end
   
   def discount 
@@ -28,5 +30,9 @@ class CashRegister
     end
   end
     
+    def items 
+      @cart 
+    end
+      
   
 end
