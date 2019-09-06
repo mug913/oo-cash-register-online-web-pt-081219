@@ -9,7 +9,6 @@ class CashRegister
     @cart = []
     @total = 0
     @emp_discount = emp_discount
-    @cart << self  
   end
   
   def discount 
@@ -18,6 +17,11 @@ class CashRegister
   
   def add_item(item, price, quantity=1) 
     @total += (price * quantity) 
+    count = quantity 
+    while count > 0 
+    @cart << item  
+    count -= 1 
+    end
   end
   
   def apply_discount
