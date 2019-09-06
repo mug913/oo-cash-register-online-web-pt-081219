@@ -45,6 +45,7 @@ class CashRegister
   def void_last_transaction 
     @total -= @last[@place]
     @place -= 1
+    binding.pry
   end
    
   
