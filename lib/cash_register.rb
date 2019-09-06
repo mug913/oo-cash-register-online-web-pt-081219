@@ -21,7 +21,6 @@ class CashRegister
     @total += (price * quantity) 
     count = quantity 
       while count > 0 
-      binding.pry
         @cart << item  
         @place += 1
         count -= 1 
