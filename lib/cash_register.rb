@@ -24,7 +24,7 @@ class CashRegister
         @cart << item  
         @place += 1
         count -= 1 
-        @last = {@place => {price => item}}
+        @last = {@place => {item => price}}
       end 
   end
   
@@ -45,7 +45,7 @@ class CashRegister
   def void_last_transaction 
     binding.pry
 
-    @total -= @last[@place[price]]
+    @total -= @last[@place[item]]
     @place -= 1
   end
    
