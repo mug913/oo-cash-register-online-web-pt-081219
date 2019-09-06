@@ -7,7 +7,7 @@ class CashRegister
   
   def initialize(emp_discount=0)
     @cart = []
-    @last = {}
+    @last = Hash.new
     @place = 0
     @total = 0
     @emp_discount = emp_discount
@@ -24,7 +24,7 @@ class CashRegister
         @cart << item  
         @place += 1
         count -= 1 
-        @last[item] << [@place, price]
+        @last[item]  [@place, price]
       end 
   end
   
