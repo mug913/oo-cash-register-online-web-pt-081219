@@ -8,6 +8,7 @@ class CashRegister
   def initialize(emp_discount=0)
     @cart = []
     @last = {}
+    @place = 0
     @total = 0
     @emp_discount = emp_discount
   end
@@ -21,8 +22,9 @@ class CashRegister
     count = quantity 
       while count > 0 
         @cart << item  
+        @place += 1
         count -= 1 
-    @last[item] = [place, price]
+        @last[item] = [place, price]
       end 
   end
   
