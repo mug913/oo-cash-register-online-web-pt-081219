@@ -48,7 +48,7 @@ class CashRegister
     @total -= @last
     #@cart.pop
   #  @place -= 1
-    binding.pry
+  #  binding.pry
   end
    
   
