@@ -43,9 +43,11 @@ class CashRegister
   end
       
   def void_last_transaction 
+    binding.pry
+
     @total -= @last[@place[price]]
     @place -= 1
-    binding.pry
   end
+   
   
 end
