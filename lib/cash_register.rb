@@ -44,6 +44,7 @@ class CashRegister
       
   def void_last_transaction 
     @total -= @last[@place]
+    @cart.pop!
     @place -= 1
     binding.pry
   end
